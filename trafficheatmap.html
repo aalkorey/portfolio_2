@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Traffic Heatmap Project Details</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+        <div id="wrapper" class="fade-in">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="index.html" class="logo">Project Portfolio</a>
+            </header>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/aziz-alkorey2022" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <div id="main">
+
+                <!-- Project Details -->
+                <section class="post">
+                    <header>
+                        <h3>Project Overview</h3>
+                    </header>
+                    <div class="project-description">
+                        <p>
+                            Also while working for Redcon Properties (Check the decision tree regressor project overview for details on the company if you haven't already), the chairman of the board of directors wanted to study traffic patterns related to projects with similar characteristics as The Golden Gate in order to identify car conjestion trends and their causes, and see if such trends could be avoided by way of measures to be taken during construction. To begin with this study, he requested a traffic heatmap for specific projects in the Cairo area.    
+                        </p>
+                        <p>
+                           To produce this heatmap, I first manually divided the perimeter of each project into zones, then used the Google Maps API to collect live traffic data for each zone over a period of time. From the types of data Google offered was the amount of time it takes, in seconds, for a car to go from one point to another. Thus, I would collect data for each car that goes from the beginning of each zone to its end, then calculated the average time it takes for all cars to pass through each zone. Data was collected every minute, but the average was calculated for each one-hour time interval, leaving me with the average time it took a car to pass through each zone in each one hour period of the day. I then downloaded an aerial image for each project, digitally drew the zones on it, then used the image pixels to identify the cooardinates within each zone. I then used that image, but without the digital zoning, as a background image, and layered a scatter plot over it, and color coded the scatter points for each zone (using the pixel coordinates) based on the average time it took for cars to pass through it. I then wrote a simple program in Python where a user is prompted to input the day of the week and time of day they want to look at, leaving me with a simple tool to be used to asses traffic patterns for these projects' perimiters at points in time that a user can choose.
+                        </p>
+                    </div>
+
+                    <!-- Project Outcomes -->
+                    <h3>Key Outcomes</h3>
+                    <p>
+                        The heatmap was then presented to the Chairman of the Board of Directors, as well as a member of the design team and the CEO. All were pleased with the results as they were able to identify some of the potential causes behind particular traffic trends by combining their engineerial expertise with what they observed using the heatmap. They also decided on incorporating the tool in meetings with a parking consultant so as to drive optimal discussions.
+                    </p>
+
+                    <!-- Call to Action -->
+                    <ul class="actions special">
+                        <li><a href="index.html" class="button">Back to Portfolio</a></li>
+                    </ul>
+                </section>
+
+            </div>
+
+            <!-- Footer -->
+            <div id="copyright">
+                <ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+            </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>

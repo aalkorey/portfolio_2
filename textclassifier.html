@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Text Classifier Project Details</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+        <div id="wrapper" class="fade-in">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="index.html" class="logo">Project Portfolio</a>
+            </header>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/aziz-alkorey2022" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <div id="main">
+
+                <!-- Project Details -->
+                <section class="post">
+                    <header>
+                        <h3>Project Overview</h3>
+                    </header>
+                    <div class="project-description">
+                        <p>
+                            Catalytic Innovators Group is a Seattle based consulting startup that aims to teach employees how to be more satisfied by showing them how to ascribe meaning to their work-related responsibilities. This was done via workshops that incorporated a survey where participants answered questions about themselves. I was tasked with analyzing the participant's answers in order to derive some insight that could potentially help the company enrich their consultation services.
+                        </p>
+                        <p>
+                            Preliminarily, after some initial cleaning, I used the GloVe vector library offered by Stanford University to convert each word in each statement into a vector, whose placement when graphed in a vector space matches up with its meaning. Then calculated the TF-IDF score for each word and multiplied it by its associated vector, so as to make the word vector indicative of the meaning of its word as well as its overall significance in the corpus. Then, all vectors in a given statement were averaged out, leaving me with a single vector for each statement of equal length, indicating the 'average meaning' of the statement. Essentially, each statemnt was associated with a vector indicating its meaning.
+                        </p>
+                        <p>
+                            I then used hierarchical clustering to explore any natural groupings within the general corpus of statements. Finding two, I then manually surveyed a group of these statements to better understand the nature of these groups. The statements turned out to be either proactive in nature, meaning the participant emphasized their desire to make an impact by way of coming up with new creative solutions to exisiting problems, or responsive, meaning a desire to enhance current solutions. Once these labels were identified, I proceeded to manually label each statement from a selected group from the corpus based on pre-determined criteria as to what makes a statement proactive or responsive, then trained a decision-tree classifier using Python to use that labelled group of statements to label the rest, as well as statements we receive from future workshops.
+                        </p>
+                    </div>
+
+                    <!-- Project Outcomes -->
+                    <h3>Key Outcomes</h3>
+                    <p>
+                        Using these labels, we were able to help employees identify their proactive or responsive work tendencies, and advised them with keeping this work-style preference in mind when taking on tasks at work. Doing so may help the employees consciously choose preferred methods, thereby setting them up for increased satisfaction with their work. Thus, this insight helped CIG offer more constrcutive consultation based on personalized, data-driven insight in light of the overall goal of the company. Further, this inspired the addition of a new question in the survey, where participants were asked weather they saw themselves as more proactive or responsive, showing how this insight ultimatley led to the enhancement of the overall workshop experience.
+                    </p>
+
+                    <!-- Call to Action -->
+                    <ul class="actions special">
+                        <li><a href="index.html" class="button">Back to Portfolio</a></li>
+                    </ul>
+                </section>
+
+            </div>
+
+            <!-- Footer -->
+            <div id="copyright">
+                <ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+            </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
